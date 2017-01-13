@@ -13,15 +13,10 @@ export default class UsersController {
     getUsers() {
         this.UsersService.getUsers().then((response) => {
             this.$scope.users = response.data;
-        console.log(response);
-
-        })
-
-        
+        })  
     }
 
-      pickUser(idUser) {
-        this.$state.go('users.posts',{id: idUser});
-
+      pickUser(id) {
+        this.$state.go('posts',{userId: id});
     }
 }
