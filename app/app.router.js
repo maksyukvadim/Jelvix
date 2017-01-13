@@ -1,7 +1,7 @@
 export function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('users', {
-      url: '/users',
+      url: '/',
       views: {
         'container@' : {
             templateUrl: 'views/users/users.view.html',
@@ -10,8 +10,8 @@ export function routerConfig($stateProvider, $urlRouterProvider, $locationProvid
           },
       }
     })
-    .state('posts', {
-      url: '/posts',
+    .state('users.posts', {
+      url: ':id/posts',
       views: {
         'container@' : {
             templateUrl: 'views/posts/posts.view.html',
@@ -31,6 +31,6 @@ export function routerConfig($stateProvider, $urlRouterProvider, $locationProvid
       }
     });
           
-  $urlRouterProvider.otherwise('users');
+  $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
   }

@@ -1,1 +1,9 @@
-<h1>Users</h1>
+<div class="container main">
+    <div ng-repeat="user in users"  ng-click="vm.pickUser(user.id)">
+        <ul>
+            <li>name: {{user.username}}</li>
+            <li>email: {{user.email}}</li>
+            <li>company: {{user.company.name}}</li>
+        </ul>
+    </div>
+</div>

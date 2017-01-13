@@ -10,4 +10,5 @@ import {routerConfig} from './app.router';
 
 angular.module('myApp', [uiRouter, 'app.users', 'app.posts', 'app.comments', 'ngMaterial'])
 .config(routerConfig)
+.constant('API_TEST', 'https://jsonplaceholder.typicode.com');
 ;
