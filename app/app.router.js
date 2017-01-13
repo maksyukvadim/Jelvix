@@ -10,8 +10,8 @@ export function routerConfig($stateProvider, $urlRouterProvider, $locationProvid
           },
       }
     })
-    .state('users.posts', {
-      url: ':id/posts',
+    .state('posts', {
+      url: '/user/:userId/posts/',
       views: {
         'container@' : {
             templateUrl: 'views/posts/posts.view.html',
@@ -21,7 +21,7 @@ export function routerConfig($stateProvider, $urlRouterProvider, $locationProvid
       }
     })
     .state('comments', {
-      url: 'comments',
+      url: '/post/:postId/comments/',
       views: {
         'container@' : {
             templateUrl: 'views/comments/comments.view.html',
@@ -32,5 +32,5 @@ export function routerConfig($stateProvider, $urlRouterProvider, $locationProvid
     });
           
   $urlRouterProvider.otherwise('/');
-  $locationProvider.html5Mode(true);
+ // $locationProvider.html5Mode(true);
   }
